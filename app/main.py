@@ -27,14 +27,14 @@ def gan_prediction():
     if text not in classes:
         raise ValueError('Didn\'t give a valid input! Go back and try again.')
 
-    model = load_model('static/conditional_generator.h5')
+    model = load_model('./static/conditional_generator.h5')
     latent_points, labels = generate_latent_points(100, classes.index(text))
     # predict requested label on model
     X = model.predict([latent_points, labels])
     # rescaling
     X = (X + 1) / 2.0
-    for file in [f for f in os.listdir('static/') if f.startswith("result")]:
-        os.remove(f'static/{file}')
-    filename = f'static/result{int(time.time())}.png'
+    for file in [f for f in os.listdir('./static/') if f.startswith("result")]:
+        os.remove(f'./static/{file}')
+    filename = f'./static/result{int(time.time())}.png'
     plt.imsave(fname=filename, arr=X[0, :, :, 0], cmap='gray_r')
     return render_template('result.html', filename=filename)

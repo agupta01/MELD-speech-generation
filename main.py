@@ -40,4 +40,4 @@ def gan_prediction():
     return render_template('result.html', filename=filename)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run()

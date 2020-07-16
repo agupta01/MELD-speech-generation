@@ -1,0 +1,5 @@
+- name: Heroku Awake
+  uses: mikeesto/heroku-awake@1.0.0
+  with:
+    # The URL of the Heroku web dyno
+    URL: https://dashboard.heroku.com/apps/emotion-gan

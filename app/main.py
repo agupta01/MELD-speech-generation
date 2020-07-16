@@ -38,6 +38,3 @@ def gan_prediction():
     filename = f'static/result{int(time.time())}.png'
     plt.imsave(fname=filename, arr=X[0, :, :, 0], cmap='gray_r')
     return render_template('result.html', filename=filename)
-
-if __name__ == '__main__':
-    app.run()

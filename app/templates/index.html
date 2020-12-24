@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" href="">
+    <title>{{ title }}</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container-fluid" style="text-align:center;">
+      <div class="jumbotron">
+        <h1>Generative Modeling of Fashion MNIST</h1>
+        <h3>
+          This webapp uses a conditional GAN to output realistic images of a given type
+          of clothing item. To use, enter the item below.
+        </h3>
+        <h4>Supported items:</h4>
+        <ul>
+          <li>t-shirt</li>
+          <li>trouser</li>
+          <li>pullover</li>
+          <li>dress</li>
+          <li>coat</li>
+          <li>sandal</li>
+          <li>shirt</li>
+          <li>sneaker</li>
+          <li>bag</li>
+          <li>ankle boot</li>
+      </div>
+      <form method="POST">
+        <input name="text">
+        <input type="submit">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  </body>
+</html>
